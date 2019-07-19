@@ -1,0 +1,28 @@
+#!/usr/local/bin/playmol
+include gaff.playmol
+suffix  atoms a
+include methanol.playmol
+suffix  atoms b
+include phenol.playmol
+suffix  atoms c
+include dioxane.playmol
+suffix  atoms d
+include dibenzo-p-dioxin.playmol
+suffix  atoms none
+
+for s in a b c d
+	align   mol(C1$s) x y
+next
+
+box lengths 40 40 40
+define delta_x as 5
+define delta_y as 3
+packmol fix mol(C1a) -$delta_x +$delta_y 0
+packmol fix mol(C1c) +$delta_x +$delta_y 0
+packmol fix mol(C1b) -$delta_x -$delta_y 0
+packmol fix mol(C1d) +$delta_x -$delta_y 0
+packmol action execute
+
+write   pdb molecules.pdb
+shell   vmd -e molecules.tcl
+

@@ -1,0 +1,50 @@
+define molecule as phenol
+
+
+# Atom definitions:
+atom C1 ca -0.1659
+atom C2 ca -0.094
+atom C3 ca -0.1852
+atom C4 ca 0.123
+atom C5 ca -0.1852
+atom C6 ca -0.094
+atom O1 oh -0.4989
+atom H1 ha 0.1324
+atom H2 ha 0.1337
+atom H3 ha 0.1409
+atom H4 ha 0.1409
+atom H5 ha 0.1337
+atom H6 ho 0.4186
+
+# Bond definitions:
+bond C1 C6
+bond C1 C2
+bond C2 C3
+bond C3 C4
+bond C4 C5
+bond C5 C6
+bond C4 O1
+bond C1 H1
+bond C2 H2
+bond C3 H3
+bond C5 H4
+bond C6 H5
+bond O1 H6
+
+# Coordinates:
+build
+13
+
+C1 1.885 -1.036 -0.112
+C2 2.921 -1.631 0.608
+C3 2.878 -1.652 2.002
+C4 1.8 -1.079 2.676
+C5 0.764 -0.484 1.955
+C6 0.807 -0.463 0.561
+O1 1.759 -1.098 4.036
+H1 1.918 -1.021 -1.198
+H2 3.76 -2.077 0.083
+H3 3.689 -2.115 2.558
+H4 -0.079 -0.035 2.474
+H5 -0.0 0.0 0.0
+H6 0.952 -0.663 4.355

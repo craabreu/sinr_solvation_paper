@@ -1,0 +1,79 @@
+define molecule as  dibenzo-p-dioxin
+
+
+# Atom definitions:
+atom C1 ca -0.1279
+atom C2 ca -0.1277
+atom C3 ca -0.1166
+atom C4 ca 0.0629
+atom C5 ca 0.0629
+atom C6 ca -0.1166
+atom O1 os -0.2251
+atom C7 ca 0.0629
+atom C8 ca -0.1166
+atom C9 ca -0.1277
+atom C10 ca -0.1277
+atom C11 ca -0.1166
+atom C12 ca 0.0629
+atom O2 os -0.2251
+atom H1 ha 0.1392
+atom H2 ha 0.1392
+atom H3 ha 0.1548
+atom H4 ha 0.1548
+atom H5 ha 0.1548
+atom H6 ha 0.1392
+atom H7 ha 0.1392
+atom H8 ha 0.1548
+
+# Bond definitions:
+bond C1 C6
+bond C1 C2
+bond C2 C3
+bond C3 C4
+bond C4 O2
+bond C4 C5
+bond C5 C6
+bond C5 O1
+bond O1 C7
+bond C7 C12
+bond C7 C8
+bond C8 C9
+bond C9 C10
+bond C10 C11
+bond C11 C12
+bond C12 O2
+bond C1 H1
+bond C2 H2
+bond C3 H3
+bond C6 H4
+bond C8 H5
+bond C9 H6
+bond C10 H7
+bond C11 H8
+
+# Coordinates:
+build
+22
+
+C1 -1.858 0.74 0.8
+C2 -1.004 -0.257 0.326
+C3 -1.437 -1.582 0.269
+C4 -2.727 -1.905 0.689
+C5 -3.58 -0.91 1.163
+C6 -3.149 0.415 1.22
+O1 -4.856 -1.183 1.585
+C7 -5.239 -2.498 1.512
+C8 -6.529 -2.821 1.932
+C9 -6.962 -4.146 1.875
+C10 -6.107 -5.143 1.401
+C11 -4.817 -4.818 0.982
+C12 -4.386 -3.494 1.038
+O2 -3.109 -3.22 0.616
+H1 -1.517 1.77 0.842
+H2 0.0 -0.0 0.001
+H3 -0.766 -2.353 -0.101
+H4 -3.808 1.196 1.587
+H5 -7.199 -2.051 2.303
+H6 -7.966 -4.403 2.201
+H7 -6.448 -6.174 1.358
+H8 -4.157 -5.599 0.613
