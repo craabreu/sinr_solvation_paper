@@ -21,19 +21,12 @@ reprint,
 %\usepackage{mathtools}
 %\mathtoolsset{showonlyrefs}
 %
-\DeclareMathOperator\arctanh{arctanh}
-\DeclareMathOperator\arcsinh{arcsinh}
-\DeclareMathOperator\sech{sech}
-%
 \newcommand{\mt}[1]{\boldsymbol{\mathbf{#1}}}          % matrix symbol
 \newcommand{\vt}[1]{\boldsymbol{\mathbf{#1}}}          % vector symbol
 \newcommand{\tr}[1]{#1^\text{t}}                       % transposition
 \newcommand{\diff}[2]{\frac{\partial #2}{\partial #1}} % derivative
-\newcommand{\avg}[1]{\overline{#1}}                    % average
-%\newcommand{\Liu}[1]{\mathcal{L}_{#1}}                 % Liouville operator
-\newcommand{\Liu}{\mathcal{L}}
-\newcommand{\Ham}[1]{{\mathcal H}_\mathrm{#1}}         % Hamiltonian
-\newcommand{\nn}{n}
+%
+\renewcommand{\AA}{\mathring{A}}                       % Angstrom symbol
 
 \begin{document}
 
@@ -100,38 +93,6 @@ Hence, what we denominate as solvation free energy in the forthcoming sections i
 \section{Results}
 \label{sec:results}
 
-%\subsection{Chemical Potential of Lennard-Jones Fluid}
-%\label{sec:lennard-jones chemical potential}
-%
-%In this section, we present results concerning the chemical potential of a Lennard-Jones fluid, i.e. the solvation free energy of a single particle in such fluid.
-%Although we employed parameters determined from experimental data for argon \cite{White_1999}, the analysis is evidently prone to a corresponding-states analogy.
-%The parameters we employed are $m = 39.948~\mathrm{Da}$, $\sigma = 3.405~\mathrm{\AA}$, and $\epsilon/k_B = 125.2~\mathrm{K}$, where $k_B$ is the Boltzmann constant.
-%A truncated/smoothed Lennard-Jones model was used, in which the standard potential energy $V(r) = 4\epsilon[(\sigma/r)^{12}-(\sigma/r)^6]$ is multiplied by
-%\begin{equation*}
-%%f(z) = \begin{cases}
-%%1 & z < 0 \\
-%%1 - 10 z^3 + 15 z^4 - 6 z^5 & 0 \leq z \leq 1 \\
-%%0 & z > 1
-%%\end{cases},
-%f(z) = \theta(-z) + \sqcap(z) (1 - 10 z^3 + 15 z^4 - 6 z^5),
-%\end{equation*}
-%where $z = \frac{r+\delta r-r_c}{\delta r}$.
-%The values we specified for the cut-off distance and the healing length were, respectively, $r_c = 10~\mathrm{\AA}$ and $\delta r = 1~\mathrm{\AA}$.
-%In all simulations, the total number of particles (including the one affected by the coupling parameter $\lambda$) was $250$.
-%The simulation box was a cubic one with periodic boundary conditions and side length $L = 22.734~\mathrm{\AA}$, resulting in a reduced density $\rho^\ast = 0.84$ when $\lambda = 1$.
-%The temperature in all simulations was $T = 300~\mathrm{K}$, yielding a reduced temperature $T^\ast = 2.396$.
-%
-%According to the Lennard-Jones equations of state by \citeauthor{Johnson_1993} \cite{Johnson_1993}, which is supposed to reproduce a full (as opposed to truncated and smoothed) potential, the chemical potential at $\rho^\ast = 0.84$ and $T^\ast = 2.396$ is $9.20~\mathrm{kJ/mol}$.
-%
-%
-%
-%
-%We executed equilibrium NVT-ensemble simulations at 21 evenly spaced values of $\lambda$ between $0$ and $1$ by using a Langevin thermostat with the BAOAB integration method \cite{Leimkuhler_2012, Leimkuhler_2013}.
-%The time step size was $3~\mathrm{fs}$.
-%After $300~\mathrm{ps}$ of equilibration at a given $\lambda_i$, information was collected during $3~\mathrm{ns}$, including the derivative of the potential energy with respect with $\lambda$ evaluated at $\lambda_i$, as well as the set of potential energies evaluated at $\lambda_j$ for all $j \in [1,21]$.
-%This allows us to compute the free energy profile using both TI and MBAR.
-%
-%
 \subsection{Hydration Free Energy of a Single Lennard-Jones Particle}
 \label{sec:hydration free energy}
 
